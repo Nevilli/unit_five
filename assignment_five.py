@@ -2,7 +2,7 @@ import random
 
 
 def play():
-    input("Shall we play a game?")
+    play = input("Shall we play a game?")
     if play == "yes" or play == "Yes":
         return True
     else:
@@ -23,13 +23,14 @@ def main():
             if guess == number:
                 print("You guessed it!")
                 print("You guessed it in", total_guesses)
-
-
-
+                break
+            elif guess < number:
+                print("Your guess was too low")
+            else:
+                print("Your guess was too high")
 
         else:
-            break
-    print("Finished")
+            print("Finished")
 
 
 main()
